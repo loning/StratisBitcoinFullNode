@@ -97,6 +97,7 @@ namespace Stratis.Bitcoin.Connection
 			{
 				NodeConnectionParameters cloneParameters = this.parameters.Clone();
 				var server = new NodeServer(this.Network);
+
 				server.LocalEndpoint = listen.Endpoint;
 				server.ExternalEndpoint = this.connectionManagerSettings.ExternalEndpoint;
 				this.Servers.Add(server);
